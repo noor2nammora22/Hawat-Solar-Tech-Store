@@ -1,0 +1,17 @@
+.materialItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  background-color: #f3f3f3;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.detailsButton {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 8px;
+}

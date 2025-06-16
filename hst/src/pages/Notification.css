@@ -1,0 +1,39 @@
+.notificationsContainer {
+  padding: 20px;
+}
+
+.notificationsList {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.notificationItem {
+  padding: 15px 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-size: 16px;
+}
+
+.notificationItem.new {
+  background-color: #f0f4ff;
+  color: #000;
+  font-weight: 600;
+}
+
+.notificationItem.read {
+  background-color: #f9f9f9;
+  color: #777;
+  font-weight: 400;
+}
+
+.blueDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #007bff;
+  margin-left: 10px;
+}

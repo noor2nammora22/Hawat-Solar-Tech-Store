@@ -1,0 +1,20 @@
+.usersPage {
+  padding: 20px;
+  text-align: center;
+}
+
+.userCard {
+  background: #f0f0f0;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 8px;
+  width: 80%;
+}
+
+.addUserButton {
+  background-color: #003399;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+}
