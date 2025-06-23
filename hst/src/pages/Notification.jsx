@@ -1,12 +1,12 @@
+// Notifications.jsx
 import React from 'react';
-import './Notification.css';
+import '../Style/Notifications.css';
 
 export default function Notifications() {
-
   const notifications = [
-    { id: 1, text: "تم حجز 200 لوح طاقة من النوع 170", isNew: true },
-    { id: 2, text: "تم إضافة 10 كبلات من النوع Y", isNew: true },
-    { id: 3, text: "تم حجز 100 لوح طاقة من النوع 150", isNew: false },
+    { id: 1, text: "تم حجز 200 لوح طاقة من النوع 170 من قبل المتجر 1" , isNew: true },
+    { id: 2, text: "تم إضافة 10 كبلات من النوع Y من قبل المتجر6", isNew: true },
+    { id: 3, text: "تم حجز 100 لوح طاقة من النوع 150 من قبل المتجر 4", isNew: false },
     { id: 4, text: "تم إضافة 5 كبلات من النوع X", isNew: false },
   ];
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './MyReservations.css';
+import '../Style/MyReservations.css';
 import { FaTrash, FaCheckCircle } from 'react-icons/fa';
 
 export default function MyReservations() {

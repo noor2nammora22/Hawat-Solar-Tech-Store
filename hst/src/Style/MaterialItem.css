@@ -1,0 +1,46 @@
+.materialsContainer {
+  padding: 20px;
+}
+
+.materialItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f1f1f1;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  color: #0044cc;
+}
+
+.materialName {
+  color: #020305;
+}
+
+.detailsButton {
+  border: 1px solid #0044cc;
+  background-color: transparent;
+  color: #0044cc;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.addButton {
+  margin-top: 20px;
+  background-color: #0044cc;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 68, 204, 0.4);
+  transition: background-color 0.3s ease;
+}
+
+.addButton:hover {
+  background-color: #0033aa;
+}

@@ -1,0 +1,58 @@
+/* Bottnav.css */
+.navbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;       /* خليه 100% من العنصر الأب مش 100vw */
+  max-width: 400px;  /* نفس عرض phoneContainer */
+  background-color: #f1f1f1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 8px 0;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+  border-top: 2px solid #0044cc;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  z-index: 100;
+  border-radius: 0 0 20px 20px; /* زي phoneContainer */
+}
+
+.navButton, .activeTab {
+  background: none;
+  border: none;
+  color: #0044cc;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  width: 60px;
+}
+
+.navButton svg, .activeTab svg {
+  font-size: 22px;
+  margin-bottom: 4px;
+}
+
+.navButton:hover {
+  background-color: #cce0ff;
+  color: #002a99;
+}
+
+.activeTab {
+  background-color: #0044cc;
+  color: white;
+  box-shadow: 0 0 8px #0044cc;
+}
+
+.activeTab:hover {
+  background-color: #003399;
+}
+
+.navButton div, .activeTab div {
+  font-weight: 600;
+  user-select: none;
+}

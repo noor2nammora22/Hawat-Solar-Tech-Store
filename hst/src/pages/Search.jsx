@@ -1,16 +1,13 @@
 import React, { useState } from 'react';
-import './Search.css';
-
+import '../Style/search.css'
 export default function Search() {
-  const [startDate, setStartDate] = useState('');
-  const [endDate, setEndDate] = useState('');
+  const [dates, setDates] = useState({ from: '', to: '' });
   const [user, setUser] = useState('');
   const [material, setMaterial] = useState('');
 
   const handleSearch = () => {
-    console.log("فلترة حسب: ", { startDate, endDate, user, material });
-    // هون مستقبلاً بتجيب النتائج من قاعدة بيانات أو API
-  }
+    console.log("فلترة حسب:", { ...dates, user, material });
+  };
 
   return (
     <div className="searchContainer">
@@ -18,36 +15,39 @@ export default function Search() {
 
       <div className="filterGroup">
         <label>من تاريخ:</label>
-        <input type="date" value={startDate} onChange={(e) => setStartDate(e.target.value)} />
+        <input type="date" value={dates.from} onChange={e => setDates({...dates, from: e.target.value})} />
       </div>
 
       <div className="filterGroup">
         <label>إلى تاريخ:</label>
-        <input type="date" value={endDate} onChange={(e) => setEndDate(e.target.value)} />
+        <input type="date" value={dates.to} onChange={e => setDates({...dates, to: e.target.value})} />
       </div>
 
       <div className="filterGroup">
         <label>المستخدم:</label>
-        <select value={user} onChange={(e) => setUser(e.target.value)}>
-          <option value="">اختر المستخدم</option>
-          <option value="نور">نور</option>
-          <option value="محمد">محمد</option>
-          <option value="خالد">خالد</option>
+        <select value={user} onChange={e => setUser(e.target.value)}>
+          <option>اختر المستخدم</option>
+          <option>نور</option>
+          <option>محمد</option>
+          <option>خالد</option>
         </select>
       </div>
 
       <div className="filterGroup">
         <label>المادة:</label>
-        <select value={material} onChange={(e) => setMaterial(e.target.value)}>
-          <option value="">اختر المادة</option>
-          <option value="ألواح">ألواح</option>
-          <option value="بطاريات">بطاريات</option>
-          <option value="كبلات">كبلات</option>
-          <option value="شرائط">شرائط</option>
+        <select value={material} onChange={e => setMaterial(e.target.value)}>
+          <option>اختر المادة</option>
+          <option>ألواح</option>
+          <option>بطاريات</option>
+          <option>كبلات</option>
+          <option>شرائط</option>
         </select>
       </div>
 
-      <button className="searchButton" onClick={handleSearch}>بحث</button>
+      <div className="buttonsRow">
+        <button className="btn cancel">إلغاء</button>
+        <button className="btn search" onClick={handleSearch}>بحث</button>
+      </div>
     </div>
   );
 }

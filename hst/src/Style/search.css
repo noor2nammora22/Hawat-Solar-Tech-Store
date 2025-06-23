@@ -1,0 +1,87 @@
+/* search.css */
+
+.searchContainer {
+ max-width: 100%;
+  width: 100%;
+  padding: 25px 30px;
+  background-color: #f1f1f1;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 68, 204, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+  box-sizing: border-box;
+}
+
+  
+
+.searchContainer h2 {
+  text-align: center;
+  color: #0044cc;
+  margin-bottom: 25px;
+  font-weight: 700;
+  border-bottom: 2px solid #0044cc;
+  padding-bottom: 8px;
+}
+
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.filterGroup label {
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #0044cc;
+  user-select: none;
+}
+
+.filterGroup input[type="date"],
+.filterGroup select {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1.5px solid #ddd;
+  font-size: 15px;
+  outline-color: #0044cc;
+  transition: border-color 0.3s ease;
+}
+
+.filterGroup input[type="date"]:focus,
+.filterGroup select:focus {
+  border-color: #0044cc;
+}
+
+.buttonsRow {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.btn {
+  padding: 10px 24px;
+  font-weight: 600;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  user-select: none;
+  font-size: 15px;
+}
+
+.btn.cancel {
+  background-color: #ddd;
+  color: #adadad;
+}
+
+.btn.cancel:hover {
+  background-color: #bbb;
+}
+
+.btn.search {
+  background-color: #0044cc;
+  color: white;
+}
+
+.btn.search:hover {
+  background-color: #003399;
+}

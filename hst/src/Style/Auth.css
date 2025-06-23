@@ -1,0 +1,42 @@
+.authContainer {
+  width: 100%;
+  max-width: 350px;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.authContainer h2 {
+  text-align: center;
+  color: #0044cc;
+  margin-bottom: 20px;
+}
+
+.authContainer input {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.authButton {
+  background: #0044cc;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.switchText {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.switchText span {
+  color: #0044cc;
+  cursor: pointer;
+}

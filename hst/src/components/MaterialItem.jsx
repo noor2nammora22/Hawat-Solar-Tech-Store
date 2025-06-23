@@ -1,11 +1,34 @@
 import React from 'react';
-import './MaterialItem.css';
+import '../Style/MaterialItem.css';
 
-export default function MaterialItem({ name }) {
+export default function Materials() {
   return (
-    <div className="materialItem">
-      <span>{name}</span>
-      <button className="detailsButton">التفاصيل</button>
+    <div className="materialsContainer">
+      <h3>المواد</h3>
+
+      <div className="materialItem">
+        <button className="detailsButton">تفاصيل</button>
+        <span className="materialName">البطاريات</span>
+       
+      </div>
+
+      <div className="materialItem">
+       <button className="detailsButton">تفاصيل</button>
+        <span className="materialName">الألواح</span>
+       
+      </div>
+
+      <div className="materialItem">
+        <button className="detailsButton">تفاصيل</button>
+        <span className="materialName">الكبلات</span>
+      </div>
+
+      <div className="materialItem">
+        <button className="detailsButton">تفاصيل</button>
+        <span className="materialName">الشرائط</span>
+      </div>
+
+      <button className="addButton">إضافة</button>
     </div>
   );
 }

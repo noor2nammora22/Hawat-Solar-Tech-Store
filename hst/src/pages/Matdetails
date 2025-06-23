@@ -1,0 +1,59 @@
+import React, { useState } from 'react';
+import '../Style/MaterialItem.css';
+
+export default function Materials() {
+  const [selectedMaterial, setSelectedMaterial] = useState(null);
+
+  // البيانات التجريبية الخاصة بالتفاصيل
+  const materialData = {
+    البطاريات: [
+      { النوع: "AA", العدد: 150, الحالة: "متاح" },
+      { النوع: "AAA", العدد: 100, الحالة: "محجوز" },
+    ],
+    الألواح: [
+      { النوع: "720", العدد: 200, الحالة: "محجوز" },
+      { النوع: "720", العدد: 200, الحالة: "متاح" },
+      { النوع: "715", العدد: 200, الحالة: "متاح" },
+    ],
+    الكبلات: [],
+    الشرائط: []
+  };
+
+  // إذا تم اختيار مادة، نعرض تفاصيلها
+  if (selectedMaterial) {
+    return (
+      <div className="materialsContainer">
+        <h3>تفاصيل: {selectedMaterial}</h3>
+        {materialData[selectedMaterial].length > 0 ? (
+          materialData[selectedMaterial].map((item, index) => (
+            <div className="materialDetailsItem" key={index}>
+              <span>النوع: {item.النوع}</span><br />
+              <span>العدد: {item.العدد}</span><br />
+              <span>الحالة: {item.الحالة}</span>
+            </div>
+          ))
+        ) : (
+          <p>لا يوجد بيانات</p>
+        )}
+        <button className="addButton">إضافة</button>
+        <button className="backButton" onClick={() => setSelectedMaterial(null)}>رجوع</button>
+      </div>
+    );
+  }
+
+  // عرض القائمة الرئيسية
+  return (
+    <div className="materialsContainer">
+      <h3>المواد</h3>
+
+      {Object.keys(materialData).map((material) => (
+        <div className="materialItem" key={material}>
+          <button className="detailsButton" onClick={() => setSelectedMaterial(material)}>تفاصيل</button>
+          <span className="materialName">{material}</span>
+        </div>
+      ))}
+
+      <button className="addButton">إضافة</button>
+    </div>
+  );
+}

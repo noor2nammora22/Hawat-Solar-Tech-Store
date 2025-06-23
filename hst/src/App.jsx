@@ -11,9 +11,10 @@ export default function App() {
 
   const renderBottomContent = () => {
     switch (bottomTab) {
-      case 'home': return <Home />;
+      
       case 'search': return <Search />;
       case 'myReservations': return <MyReservations />;
+      case 'home': return <Home />;
       case 'history': return <History />;
       case 'profile': return <Profile />;
       default: return null;
